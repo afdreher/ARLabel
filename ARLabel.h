@@ -28,6 +28,8 @@
 
 #import <UIKit/UIKit.h>
 
+
+IB_DESIGNABLE
 @interface ARLabel : UILabel
 
 // Note: The built-in UILabel adjustsFontSizeToFitWidth has its problems, that is

@@ -174,6 +174,11 @@
 
 - (void)setFontSizeThatFits
 {
+  // Don't waste time if zero rect
+  if (CGSizeEqualToSize(self.frame.size, CGSizeZero)) {
+    return;
+  }
+  
 	// This method is here to solve problems that the built-in UILabel adjustsFontSizeToFitWidth has. For
 	// example fitting size also by height and centering by height(this is an accidental fix)...
 	// The hardcoded values here are derived from experimentation and the purpose of them is to reduce the font
